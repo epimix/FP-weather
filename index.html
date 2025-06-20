@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Weather</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.10/css/weather-icons.min.css">
+</head>
+<body>
+
+    <div class="navig">
+        <h1>MY WEATHER</h1>
+        <input onkeypress="EnterHandler(event)" placeholder="Type your city..." id="searchcity" type="search">
+
+    </div>
+    <div class="second_block">
+        <button class="btn_sec">Today</button>
+        <button class="btn_sec" id="btn_5_day_forecast" onclick="location.href='./5-day-forecast/5-day-forecast.html';">
+            5-day forecast
+        </button>
+    </div>
+    <div id="main-first">
+        <div class="upper">
+            <h2 class="text-3">CURRENT WEATHER </h2>
+            <h2 id="city">loading...</h2>
+            <h2 id="date" class="text-3">Loading...</h2>
+        </div>
+        <div class="down">
+            <div>
+                <img id="weather_icon" class="sunny_first_block"
+                    src="https://cdn-icons-png.flaticon.com/128/10484/10484062.png" alt="Sunny weather icon">
+                <p id="description_today">Sunny</p>
+            </div>
+            <div style="margin-bottom: 10px; margin-right: 100px;">
+
+                <h2 id="main_temp" style=" font-size: xxx-large;">Loading ...</h2>
+                <p id="feels_like">Feels like: Loading...</p>
+            </div>
+            <div style="margin-bottom:20px;">
+                <p id="sunrise">Sunrise: Loading...</p>
+                <p id="sunset">Sunset: Loading...</p>
+                <p id="duration">Duration 10:07 hr</p>
+            </div>
+        </div>
+    </div>
+    <div id="main-second">
+        <h2 class="text-3">HOURLY</h2>
+        <div id="hourly_forecast" class="scroll-container" style="display: flex; margin-left: 20px;">
+            <div>
+                <h3>Today</h3>
+                <div style="height: 60px;"></div>
+                <h5>Forecast</h5>
+                <h5>Temp(°С)</h5>
+                <h5>RealFeel</h5>
+                <h5>Wind(km/h)</h5>
+            </div>
+            <div class="forecast">
+                <h3>7pm</h3>
+                <div> <img style="margin-bottom: 0px;" class="icon-forecast"
+                        src="https://cdn-icons-png.flaticon.com/128/10484/10484062.png" alt="Sunny weather icon"></div>
+                <h5>Sunny</h5>
+                <h5>26°</h5>
+                <h5>28°</h5>
+                <h5>9 ESE</h5>
+            </div>
+            <div class="forecast">
+                <h3>8pm</h3>
+                <div> <img style="margin-bottom: 0px;" class="icon-forecast"
+                        src="https://cdn-icons-png.flaticon.com/128/10484/10484062.png" alt="Sunny weather icon"></div>
+                <h5>Sunny</h5>
+                <h5>26°</h5>
+                <h5>28°</h5>
+                <h5>9 ESE</h5>
+            </div>
+            <div class="forecast">
+                <h3>9pm</h3>
+                <div> <img style="margin-bottom: 0px;" class="icon-forecast"
+                        src="https://cdn-icons-png.flaticon.com/128/10484/10484062.png" alt="Sunny weather icon"></div>
+                <h5>Sunny</h5>
+                <h5>26°</h5>
+                <h5>28°</h5>
+                <h5>9 ESE</h5>
+            </div>
+            <div class="forecast">
+                <h3>10pm</h3>
+                <div> <img style="margin-bottom: 0px;" class="icon-forecast"
+                        src="https://cdn-icons-png.flaticon.com/128/10484/10484062.png" alt="Sunny weather icon"></div>
+                <h5>Sunny</h5>
+                <h5>26°</h5>
+                <h5>28°</h5>
+                <h5>9 ESE</h5>
+            </div>
+            <div class="forecast">
+                <h3>11pm</h3>
+                <div> <img style="margin-bottom: 0px;" class="icon-forecast"
+                        src="https://cdn-icons-png.flaticon.com/128/10484/10484062.png" alt="Sunny weather icon"></div>
+                <h5>Sunny</h5>
+                <h5>26°</h5>
+                <h5>28°</h5>
+                <h5>9 ESE</h5>
+            </div>
+            <div class="forecast">
+                <h3>12pm</h3>
+                <div> <img style="margin-bottom: 0px;" class="icon-forecast"
+                        src="https://cdn-icons-png.flaticon.com/128/10484/10484062.png" alt="Sunny weather icon"></div>
+                <h5>Sunny</h5>
+                <h5>26°</h5>
+                <h5>28°</h5>
+                <h5>9 ESE</h5>
+            </div>
+            <div class="forecast">
+                <h3>1am</h3>
+                <div style="height: 60px;"></div>
+                <h5>Sunny</h5>
+                <h5>26°</h5>
+                <h5>28°</h5>
+                <h5>9 ESE</h5>
+            </div>
+
+        </div>
+    </div>
+    <div id="main-third">
+        <H2 class="text-3"> NEARBY PLACES</H2>
+        <div style="display: flex;">
+            <div>
+                <div class="nearby_places">
+                    <p>Dubno</p>
+                    <div> <img style="margin-bottom: 0px;" class="icon-nearby"
+                            src="https://cdn-icons-png.flaticon.com/128/10484/10484062.png" alt="Sunny weather icon">
+                    </div>
+                    <p>36°C</p>
+                </div>
+                <div class="nearby_places">
+                    <p>Lutsk</p>
+                    <div> <img style="margin-bottom: 0px;" class="icon-nearby"
+                            src="https://cdn-icons-png.flaticon.com/128/10484/10484062.png" alt="Sunny weather icon">
+                    </div>
+                    <p>36°C</p>
+                </div>
+            </div>
+            <div>
+                <div class="nearby_places">
+                    <p>Gorodok</p>
+                    <div> <img style="margin-bottom: 0px;" class="icon-nearby"
+                            src="https://cdn-icons-png.flaticon.com/128/10484/10484062.png" alt="Sunny weather icon">
+                    </div>
+                    <p>36°C</p>
+                </div>
+                <div class="nearby_places">
+                    <p>Obariv</p>
+                    <div> <img style="margin-bottom: 0px;" class="icon-nearby"
+                            src="https://cdn-icons-png.flaticon.com/128/10484/10484062.png" alt="Sunny weather icon">
+                    </div>
+                    <p>36°C</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
