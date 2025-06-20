@@ -189,7 +189,6 @@ function renderNearbyPlacesByCoords(lat, lon, excludeCity) {
                 nearbyContainer.innerHTML = '<p>No nearby places found.</p>';
                 return;
             }
-            // Filter out the searched city itself, show up to 4 others
             const nearby = data.list.filter(c => c.name.toLowerCase() !== excludeCity.toLowerCase()).slice(0, 4);
             if (nearby.length === 0) {
                 nearbyContainer.innerHTML = '<p>No nearby places found.</p>';
